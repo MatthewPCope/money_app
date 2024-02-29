@@ -4,18 +4,18 @@ import { useSignup } from '../../hooks/useSignup'
 
 export default function Signup() {
 
-  const [displayName, setDisplayName] = useState('')
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
-  const {signup, isPending, error} = useSignup()
+    const [displayName, setDisplayName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const {signup, isPending, error} = useSignup()
 
-  const handleSubmit = (e) => {
+    const handleSubmit = (e) => {
     e.preventDefault()
     signup(displayName, email, password)
 
 }
-  
-  return (
+
+return (
     <form onSubmit={handleSubmit} className={styles['signup-form']}>
     <h2>Signup</h2>
     <label>
